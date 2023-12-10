@@ -17,11 +17,6 @@ a pull request.
 Contributing to ESPHome-Docs
 ----------------------------
 
-.. image:: /images/logo-docs.svg
-    :align: center
-    :width: 60.0%
-    :class: dark-invert
-
 One of the areas of ESPHome that can always be improved is the documentation.
 If you see an issue somewhere, a spelling mistakes or if you want to share your awesome
 setup, please feel free to submit a pull request.
@@ -30,6 +25,19 @@ The ESPHome documentation is built using `sphinx <http://www.sphinx-doc.org/>`__
 `reStructuredText <http://docutils.sourceforge.net/rst.html>`__ for all source files.
 
 If you're not familiar with writing rST, see :ref:`rst-syntax` for a quick refresher.
+
+.. note::
+
+Some notes about the docs:
+
+- Use the English language (duh...)
+- An image tells a thousand words, please use them wherever possible. But also don't forget to shrink them, for example
+  I often use https://tinypng.com/
+- Try to use examples as often as possible (also while it's great to use highly accurate,
+  and domain-specific lingo, it should not interfere with new users understanding the content)
+- Fixes/improvements for the docs themselves should go to the ``current`` branch of the
+  esphomedocs repository. New features should be added against the ``next`` branch.
+- Always create new branches in your fork for each pull request.
 
 Through Github
 **************
@@ -89,8 +97,8 @@ For example, in this case, you'd want to go to line 136 of ``pzemac.rst`` and ad
 
 Once you make that change, the pull request will be built again, and hopefully this time where will be no other errors.
 
-Build
-*****
+Local Build
+***********
 
 .. note::
 
@@ -117,20 +125,6 @@ Then, use the provided Makefile to build the changes and start a live-updating w
 
     # Start web server on port 8000
     make live-html
-
-Notes
-*****
-
-Some notes about the docs:
-
-- Use the English language (duh...)
-- An image tells a thousand words, please use them wherever possible. But also don't forget to shrink them, for example
-  I often use https://tinypng.com/
-- Try to use examples as often as possible (also while it's great to use highly accurate,
-  and domain-specific lingo, it should not interfere with new users understanding the content)
-- Fixes/improvements for the docs themselves should go to the ``current`` branch of the
-  esphomedocs repository. New features should be added against the ``next`` branch.
-- Always create new branches in your fork for each pull request.
 
 .. _rst-syntax:
 
