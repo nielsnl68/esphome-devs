@@ -27,6 +27,14 @@ import sys
 
 sys.path.append(os.path.abspath("."))
 
+# General information about the project.
+project = "ESPHome Developers"
+copyright = "2023, ESPHome by Nabu Casa"
+html_show_copyright = False
+html_show_sphinx = False
+author = "ESPHome"
+
+
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -41,6 +49,9 @@ extensions = [
     "seo",
     "components",
     "sitemap",
+    "sphinx.ext.autodoc",
+    "todo",
+    "sphinx.ext.autosummary",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -50,17 +61,12 @@ templates_path = ["_templates"]
 # You can specify multiple suffix as a list of string:
 #
 # source_suffix = ['.rst', '.md']
-source_suffix = ".rst"
-
+source_suffix = {
+    ".rst": "restructuredtext",
+    ".md": "markdown",
+}
 # The master toctree document.
 master_doc = "index"
-
-# General information about the project.
-project = "ESPHome"
-copyright = "2023, Nabu Casa"
-html_show_copyright = False
-html_show_sphinx = False
-author = "ESPHome"
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -108,7 +114,7 @@ highlight_language = "yaml"
 primary_domain = None
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = False
+todo_include_todos = true
 
 
 # -- Options for HTML output ----------------------------------------------
@@ -170,7 +176,7 @@ html_sidebars = {
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "esphomedoc"
+htmlhelp_basename = "esphomedev"
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -204,7 +210,7 @@ latex_engine = "xelatex"
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, "esphome", "ESPHome Documentation", [author], 1)]
+man_pages = [(master_doc, "esphome.dev", "ESPHome Developers", [author], 1)]
 
 
 # -- Options for Texinfo output -------------------------------------------
@@ -215,10 +221,10 @@ man_pages = [(master_doc, "esphome", "ESPHome Documentation", [author], 1)]
 texinfo_documents = [
     (
         master_doc,
-        "esphome",
-        "ESPHome Documentation",
+        "esphomedev",
+        "ESPHome Developers",
         author,
-        "esphome",
+        "esphomedev",
         "One line description of project.",
         "Miscellaneous",
     ),

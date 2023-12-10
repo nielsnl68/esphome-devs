@@ -1,6 +1,6 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.183.0/containers/python-3
 {
-  "name": "ESPHome - docs",
+  "name": "ESPHome - Developmers",
   "image": "mcr.microsoft.com/vscode/devcontainers/python:0-3.11",
   "postCreateCommand": "pip3 install -r requirements.txt -r requirements_test.txt",
   "postAttachCommand": "make live-html",
